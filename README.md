@@ -20,7 +20,7 @@ python .\RavenPack_test.py --lbk 12 --hlf 3.4    ## => with values defined by th
 ## NOTES
 - The code will authomatically make the plot of close prices and EMA of close prices for the ticker 'AAPL' (Apple).
 - EMA is computing using a smoothing factor (alpha). Alpha can be computed in different ways
-  -  using the half life -> alpha = 1-exp(ln(0.5)/halflife,
+  -  using the half life -> alpha = 1-exp(ln(0.5)/halflife),
   -  or using the lookback -> alpha=2/(lookback+1).
   
   *I  gave priority to the using of halflife, but if it is not provided by the user, I used a default lookback =10 days to compute alpha*
