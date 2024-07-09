@@ -16,5 +16,8 @@ python .\RavenPack_test.py    => with default values (lookback=10 days, halflife
 python .\RavenPack_test.py --lbk 12 --hlf 3.4  => with values defined by the user [lnk:lookback, hlf:halflife].  halflife has priority 
 
 ## NOTES
--The code will authomatically make the plot of close prices and EMA of close prices for the ticker 'AAPL' (Apple).
-- EMA is computing using a smoothing factor (alpha). Alpha can be computed using the half life, or using the lookback alpha=2/(lookback+1). I give priority to the using of halflife, but if it is not provided, I used the lookback to compute alpha
+- The code will authomatically make the plot of close prices and EMA of close prices for the ticker 'AAPL' (Apple).
+- EMA is computing using a smoothing factor (alpha). Alpha can be computed using the half life
+  -  alpha = 1-exp(ln(0.5)/halflife,
+  -  or using the lookback -> alpha=2/(lookback+1).
+  I  give priority to the using of halflife, but if it is not provided, I used the lookback to compute alpha
