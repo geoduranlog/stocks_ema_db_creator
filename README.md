@@ -10,10 +10,12 @@ Bring stock market data from 2020, store it in a SQLite database, and calculate 
 
 
 ## RUN it as:
+```
+python .\RavenPack_test.py    # => with default values (lookback=10 days, halflife=3.454)
 
-python .\RavenPack_test.py    => with default values (lookback=10 days, halflife=3.454)
+python .\RavenPack_test.py --lbk 12 --hlf 3.4    # => with values defined by the user [lnk:lookback, hlf:halflife].  halflife has priority 
 
-python .\RavenPack_test.py --lbk 12 --hlf 3.4  => with values defined by the user [lnk:lookback, hlf:halflife].  halflife has priority 
+```
 
 ## NOTES
 - The code will authomatically make the plot of close prices and EMA of close prices for the ticker 'AAPL' (Apple).
